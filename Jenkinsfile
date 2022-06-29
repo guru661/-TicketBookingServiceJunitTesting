@@ -2,11 +2,11 @@ pipeline {
     agent any
     stages {
         stage('git repo & clean') {
-            steps{
+            steps {
                 bat "git clone https://github.com/kishancs2020/TicketBookingServiceJunitTesting.git"
                 bat "mvn clean -f TicketBookingServiceJunitTesting"
             }
-        )
+        }
         stage('install') {
             steps {
                 bat "mvn install -f TicketBookingServiceJunitTesting"
