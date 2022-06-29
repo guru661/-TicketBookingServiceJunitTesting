@@ -4,8 +4,8 @@ pipeline {
         stage('git repo & clean') {
             steps {
                 if (fileExists('TicketBookingServiceJunitTesting')) {
-                bat "rmdir  /s /q TicketBookingServiceJunitTesting"
-                 }
+                  bat "rmdir  /s /q TicketBookingServiceJunitTesting"
+                }
                 bat "git clone https://github.com/kishancs2020/TicketBookingServiceJunitTesting.git"
                 bat "mvn clean -f TicketBookingServiceJunitTesting"
             }
